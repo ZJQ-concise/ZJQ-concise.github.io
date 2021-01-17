@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZJQの秘密基地 || 《天气之子》：关于爱我们还能思考什么</title>
+    <meta name="author" content="Zhang-Jia-Qi">
+    <meta name="description" content="人类真是个反智的物种，下辈子还是当猫吧 ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/headimg.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">ZJQの秘密基地</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/like/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/like/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://en.korilin.com">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>英文博客</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>ZJQの秘密基地</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/like/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/like/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="https://en.korilin.com">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">英文博客</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>《天气之子》：关于爱我们还能思考什么 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/10/13
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/其他">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                其他
+            </a>
+        </span>
+        
+
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p>###”愛にできることはまだあるかい”<br>《天气之子》是日本著名导演新海诚最新的，也是受到争议最大的电影。故事讲述的是一个由于家暴离家出走逃到东京的男孩帆高与祈祷就能使雨天变晴的”天气巫女”阳菜的故事。故事中帆高来到东京的一家报社打工，在采访中听到了”晴女”的传说。后来他在汉堡店遇到了女主阳菜，阳菜送给饥寒交迫的他一个汉堡。后来帆高看到阳菜疑似遭到霸凌，便出手相救，后来借助阳菜”晴女”的能力帮助别人创造晴天并赚钱养活他和阳菜以及阳菜的弟弟(一家三口(bushi))。但是阳菜由于能力使用过度很快被当做”活人祭祀”的祭品牺牲，而帆高最终以东京再无晴天为代价从天上拯救了阳菜。<br>关于这个电影，知乎上的一个问题反应了很多人对这部电影褒贬不一的争议焦点”如何评价《天气之子》中牺牲一座城拯救一个人的做法”。在这里我并不打算考究电影的哪些细节暗示了挽救阳菜并不是东京被淹的原因。这部电影主要带给我的思考是，爱情这个东西，能给我们带来什么。<br>正如警察所说，帆高为了拯救阳菜几乎葬送了自己的前程:袭警，持枪，逃离警局，甚至在铁道上狂奔。这一切都不能为世人所理解，可正是这种奋不顾身，抛弃一切的勇气，才应该是爱情真正的样子。很多人说新海诚不相信爱情，但显然只有对爱情抱有最纯真最美好的希望，才能写出如此动人的帆高与阳菜。人之所以为人，就是因为人除了理性之外还有感性，这将人与计算机去分开来，也赋予了人最高尚的能力——爱。但随着年龄的增长，社会阅历的增加，理性终将替代激情与冲动成为我们思维的主角，那时人便也丧失了爱的能力。<br>抛开中国人老生常谈的”早”恋的种种”危害”，我相信很多同学都有”喜欢上一个人”的经历。有些人用不成熟的葫芦比做现在这个年龄的爱情，这显然是不恰当的。正是因为未长成的心灵并未完全成熟，并未被世俗击败，他们才有这种超凡脱俗的，不受柴米油盐酱醋茶干扰的，纯粹的心灵之间的爱。我们歌颂爱情，歌颂爱的激昂，爱的活力，爱的狂热，也歌颂的是这种爱情。作为一个有过相关经历的人，我确实很羡慕那些每天无忧无虑，不知愁苦为何物的同学。但我从未后悔爱上一个人，也从未后悔去奋不顾身地爱一个人，因为透过爱情，我第一次窥见了青春真正的滋味——间杂着迷茫的无畏与间杂着畏缩的激情。<br>我想，我们已经找到了这部电影主题曲的第一句话”愛にできることはまだあるかい”(还有什么是爱情能做到的)的答案了——正是爱情，赋予了一个人，有关青春的一切要素。</p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2020 - 2021 ZJQの秘密基地
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Zhang-Jia-Qi
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'ZJQ-concise',      // The repository of store comments,
+        owner: 'Zhang-Jia-Qi',
+        admin: ['Zhang-Jia-Qi'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>

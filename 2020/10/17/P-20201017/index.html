@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZJQの秘密基地 || 关于公众号投稿与拒稿</title>
+    <meta name="author" content="Zhang-Jia-Qi">
+    <meta name="description" content="人类真是个反智的物种，下辈子还是当猫吧 ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/headimg.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">ZJQの秘密基地</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/like/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/like/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://en.korilin.com">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>英文博客</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>ZJQの秘密基地</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/like/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/like/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="https://en.korilin.com">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">英文博客</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>关于公众号投稿与拒稿 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/10/17
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/评论">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                评论
+            </a>
+        </span>
+        
+
+        
+    </div>
+
+    <div class="content" v-pre>
+        <p>讲个故事：前几个月某家长举报某动漫人物头发染色导致动漫下架，被全网喷。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P20201017P2.jpeg"></p>
+<p>众所周知，现在公众号在征集影评，我的一个朋友A打算写天气之子的内容，一个老师B负责审核。看过天气之子的朋友都知道，故事中帆高举枪瞄准警察是一个重要的转折，意味着帆高挣脱了一切束缚去追逐阳菜。A的影评写到该内容，并选取了一张图片(如下)作为配图，被B以”不要发布暴力内容”为尤拒绝。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P20201017P1.jpg"></p>
+<p>我之前表示过自己也会投稿，可我投稿的内容与爱情等因素有很大关联，也被B老师拒绝。当然，被拒的稿我还是博客里了（哈哈哈哈想不到吧我有自己的根据地）。</p>
+<p>再讲个故事：前几个月某家长举报某动漫人物头发染色导致动漫下架，被全网喷。</p>
+<p>此事对事不对人，所以没写老师和学生的名字。但是倒是想聊聊广泛存在于社会中的一个现象，即，宁左勿右。</p>
+<p>我经常拿这样一个例子来描述宁左勿右，超级领导甲对大领导乙宣布早上九点开会，乙听闻后为了表现出对甲的尊重，对中领导丙宣布早上八点半到会场……经过小领导丁，毫领导戊，微领导己，钠领导庚，最终传导小员工辛的时候，已经变成了六点到场。</p>
+<p>我且不说中学生是否有权谈论爱情，毕竟这是全中国都要面临的一个社会问题，仅对于”暴力”一词，我相信学校绝不会连枪口都不愿让学生看到，毕竟狂欢节的真人CS活动我们有目共睹。可到了年级一层，开明的政策却变得固步自封起来。这究竟是为什么？如果将B老师置于学校或教委领导一层，想必B老师并不会出现如此低级地错误，可这一错误却自然而然地出现在了年级一级。</p>
+<p>我的意思表达完了，懒得总结，看到这是咱们有缘，谢谢你的阅读，希望你能忘了我这番暴论去开心的生活。本来借着一股怒气写到这发现怒气差不多平息了，所以也感谢你，作为一个读者帮我平复了心情。没啥结尾，再见</p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2020 - 2021 ZJQの秘密基地
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Zhang-Jia-Qi
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'ZJQ-concise',      // The repository of store comments,
+        owner: 'Zhang-Jia-Qi',
+        admin: ['Zhang-Jia-Qi'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>

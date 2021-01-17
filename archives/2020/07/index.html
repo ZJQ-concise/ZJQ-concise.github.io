@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZJQの秘密基地 || 简洁版</title>
+    <meta name="author" content="Zhang-Jia-Qi">
+    <meta name="description" content="人类真是个反智的物种，下辈子还是当猫吧 ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/headimg.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">ZJQの秘密基地</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/like/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/like/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://en.korilin.com">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>英文博客</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>ZJQの秘密基地</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/like/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/like/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="https://en.korilin.com">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">英文博客</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                    
+<div id="archives">
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/11/8" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/11/8</div>
+                <a href="/2020/11/08/X-20201108/">
+                    <h3>化学与信息学的碰撞——有机化学的递归合成法</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/学习">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            学习
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/化学竞赛,休闲编程" style=color:#ff7d73>
+                                化学竞赛,休闲编程
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/10/26" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/10/26</div>
+                <a href="/2020/10/26/T-20201026/">
+                    <h3>北戴河的海——晚三周的游记</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/其他">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            其他
+                        </a>
+                    </span>
+                    
+
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/10/25" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/10/25</div>
+                <a href="/2020/10/25/P-20201025/">
+                    <h3>虚荣与伪装</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/评论">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            评论
+                        </a>
+                    </span>
+                    
+
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/10/17" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/10/17</div>
+                <a href="/2020/10/17/P-20201017/">
+                    <h3>关于公众号投稿与拒稿</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/评论">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            评论
+                        </a>
+                    </span>
+                    
+
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/10/17" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/10/17</div>
+                <a href="/2020/10/17/P-20201113/">
+                    <h3>关于公众号投稿与拒稿</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/评论">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            评论
+                        </a>
+                    </span>
+                    
+
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/10/17" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/10/17</div>
+                <a href="/2020/10/17/T-20201017/">
+                    <h3>《秒速五厘米》：脆弱又牢不可破的爱情</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/感悟">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            感悟
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/影评" style=color:#00bcd4>
+                                影评
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/10/13" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/10/13</div>
+                <a href="/2020/10/13/T-20201013/">
+                    <h3>《天气之子》：关于爱我们还能思考什么</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/其他">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            其他
+                        </a>
+                    </span>
+                    
+
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/10/10" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/10/10</div>
+                <a href="/2020/10/10/T-20201010/">
+                    <h3>《四月是你的谎言》影评</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/其他">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            其他
+                        </a>
+                    </span>
+                    
+
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/7/20" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/7/20</div>
+                <a href="/2020/07/20/B-20200720/">
+                    <h3>熟肉/英语练习:今年的火星甚是喧嚣</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/搬运">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            搬运
+                        </a>
+                    </span>
+                    
+
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/7/19" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/7/19</div>
+                <a href="/2020/07/19/B-20200719/">
+                    <h3>熟肉/英语练习:没有什么是两颗黑洞做不到的，如果有，那就再来一颗</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/搬运">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            搬运
+                        </a>
+                    </span>
+                    
+
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/7/18" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/7/18</div>
+                <a href="/2020/07/18/B-20200718/">
+                    <h3>熟肉/英语练习:推特艰难地抵抗着攻击其防火墙的黑客攻击</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/搬运">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            搬运
+                        </a>
+                    </span>
+                    
+
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/7/17" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/7/17</div>
+                <a href="/2020/07/17/B-20200717/">
+                    <h3>熟肉/英语练习:詹姆斯韦伯太空望远镜发射再次延期</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/搬运">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            搬运
+                        </a>
+                    </span>
+                    
+
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/7/17" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/7/17</div>
+                <a href="/2020/07/17/T-20200717/">
+                    <h3>新农夫与蛇</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/其他">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            其他
+                        </a>
+                    </span>
+                    
+
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/7/11" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/7/11</div>
+                <a href="/2020/07/11/J-20200711/">
+                    <h3>黑暗森林模拟实验:广发英雄帖</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/技术">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            技术
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/实验" style=color:#ffa2c4>
+                                实验
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/6/11" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/6/11</div>
+                <a href="/2020/06/11/T-20200611/">
+                    <h3>杂谈:我为什么而写作</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/评论">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            评论
+                        </a>
+                    </span>
+                    
+
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+    <a-timeline>
+        <a-timeline-item timestamp="2020/6/1" placement="top" color="#a5c2f5">
+            <a-card hoverable>
+                <div class="item-time">2020/6/1</div>
+                <a href="/2020/06/01/Z-20200609/">
+                    <h3>中医:从受害者角度抨击一些论调</h3>
+                </a>
+                <div class="info">
+                    
+                    <span class="category">
+                        <a href="/categories/评论">
+                            <span class="icon"><a-icon type="book" theme="filled" /></span>
+                            评论
+                        </a>
+                    </span>
+                    
+
+                    
+                    <span class="tags">
+                        <span class="icon">
+                            <a-icon type="tags" />
+                        </span>
+                        
+                        <span class="tag">
+                            
+                            <a href="/tags/中医" style=color:#ff7d73>
+                                中医
+                            </a>
+                        </span>
+                        
+                    </span>
+                    
+                </div>
+            </a-card>
+        </a-timeline-item>
+    </a-timeline>
+    
+</div>
+
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2020 - 2021 ZJQの秘密基地
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Zhang-Jia-Qi
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>

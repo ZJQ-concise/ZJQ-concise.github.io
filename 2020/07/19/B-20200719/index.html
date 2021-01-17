@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZJQの秘密基地 || 熟肉/英语练习:没有什么是两颗黑洞做不到的，如果有，那就再来一颗</title>
+    <meta name="author" content="Zhang-Jia-Qi">
+    <meta name="description" content="人类真是个反智的物种，下辈子还是当猫吧 ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/headimg.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">ZJQの秘密基地</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/like/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/like/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://en.korilin.com">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>英文博客</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>ZJQの秘密基地</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/like/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/like/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="https://en.korilin.com">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">英文博客</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>熟肉/英语练习:没有什么是两颗黑洞做不到的，如果有，那就再来一颗 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/7/19
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/搬运">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                搬运
+            </a>
+        </span>
+        
+
+        
+    </div>
+
+    <div class="content" v-pre>
+        <h1 id="两颗黑洞合并不够刺激？那就来三颗！"><a href="#两颗黑洞合并不够刺激？那就来三颗！" class="headerlink" title="两颗黑洞合并不够刺激？那就来三颗！"></a>两颗黑洞合并不够刺激？那就来三颗！</h1><p><strong>本文章翻译自Newyork Times官网，封面图片来源NYtimes网页，转载请注明来源NYtimes，<a target="_blank" rel="noopener" href="https://www.nytimes.com/2020/06/25/science/black-hole-collision-ligo.html">原文链接，包含更精美的排版和更多图片</a></strong><br>本周四，天文学家宣布它们探测到了一个人类认知中的奇观：两个本不可见的天体，黑洞，通过不可见的过程合并，但是最终变得可见！<br>故事是这样的：很久很久以前，距今40亿年，在一个遥远的星系中，一对黑洞合并了。一般来讲这一过程通常无法留下可以探测的痕迹，只将其周围的时空扰乱，释放引力波，并生成一个新的黑洞（黑洞不发光）。但是这两个黑洞属于一个旋转着的由恒星、气体和尘埃组成的吸积盘，并围绕着另一颗巨大的，高达一千万倍太阳质量的黑洞旋转。于是，这对合并的黑洞产生了一束由热辐射和光组成的冲击波，并使这次合并可以看到和听到。<br>这一解释被加利福尼亚科技研究所的Matthew Graham领导的团队提出，意图解释去年记录到的一个奇怪的闪光信号，他们周四将自己的结论发表在了Physical Review Letters期刊中。如果这个结论被证明了，这将是第一次通过直接光来直接观测黑洞，且与以往用引力波观测的效果一样。Graham说到：“我们从宇宙中最不可能被看到的天体中观测到了可见的信号。”新研究的作者、美国自然历史博物馆和纽约州立大学的K. E.Saavik Ford评论黑洞时说到：“这意味着我们可以同时看到和听到它们”，她认为此事件“非常令人激动”。研究者们说这个发现将会将研究的视野引向黑洞如何、在什么时候、什么地方，合并为更大的质量达到千亿倍太阳质量的巨型黑洞并俘获其自己的星系。这也可以说明物质在进入黑洞或通过其粉碎一切的吸积盘时的状态。两颗黑洞在合并的同时被另外一个的引力束缚着旋转？“估计没有比这个更能让天文学家感到激动的了。”Graham说到。<br>黑洞是爱因斯坦预言的密度足够大以至于光都无法逃离的天体。绝大多数天文学家知道的黑洞都是大质量恒星在其死亡时坍缩得到的。但是星系中心的黑洞往往比前者重百万倍到数亿倍，黑洞如何长到如此巨大是一个天文学接的未解之谜。2016年科学家第一次观测到了黑洞的合并，利用激光干涉引力波天文台，或者LIGO。那是一个L形状的真空管，位于华盛顿的Hanford和路易斯安那的Livingston。自此之后LIGO和意大利的Virgo一起观测到了数十个类似的漆黑宇宙中的星际约会，但是天文学家目前没有看到其发出一丝光亮。（一个例外是一对中子星的合并，中子星是超新星爆炸的遗物，它们照亮了整个宇宙并在在2017年8月被探测到）<br>2019年五月21日，一个报告传到了天文学家手中，LIGO和Virgo探测到了类似于两颗黑洞合并的信号。当晚负责观察的望远镜是加利福尼亚Palomar山上的自动设备，Zwicky Transiet Facility，它的探测器对深空中的任何火光、闪烁、爆发或者移动敏感。它被命名为Fritz Zwicky，他是一个瑞士移民的天文学家，工作在Caltech。Graham是这个望远镜的负责人，他的同事想到了两颗黑洞合并于类星体中心的超大质量黑洞稠密的吸积盘中。于是他们的团队开始在该区域中排查类星体或者类似的特殊活动</p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2020 - 2021 ZJQの秘密基地
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Zhang-Jia-Qi
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'ZJQ-concise',      // The repository of store comments,
+        owner: 'Zhang-Jia-Qi',
+        admin: ['Zhang-Jia-Qi'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>

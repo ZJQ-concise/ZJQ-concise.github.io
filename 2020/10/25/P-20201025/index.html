@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZJQの秘密基地 || 虚荣与伪装</title>
+    <meta name="author" content="Zhang-Jia-Qi">
+    <meta name="description" content="人类真是个反智的物种，下辈子还是当猫吧 ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/headimg.jpg">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">ZJQの秘密基地</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/like/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/like/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://en.korilin.com">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>英文博客</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>ZJQの秘密基地</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/like/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/like/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="https://en.korilin.com">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">英文博客</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>虚荣与伪装 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2020/10/25
+        </span>
+
+        
+        <span class="category">
+            <a href="/categories/评论">
+                <span class="icon">
+                    <a-icon type="book" theme="filled" />
+                </span>
+                评论
+            </a>
+        </span>
+        
+
+        
+    </div>
+
+    <div class="content" v-pre>
+        <h2 id="装机事件"><a href="#装机事件" class="headerlink" title="装机事件"></a>装机事件</h2><p>我起初注意到这个学弟，是因为他开设了一个我感兴趣的装机社团。我本人在装机方面虽有所研究，但并不深入，想与更多技术玩家交流学习，遂加入。可加入数月，发现社长其人并无真才实学，却仅凭口舌之术，以三寸不烂之舌赢技术中之地位。<br>此人配置单谬误颇多，闹出过300W的额定功率配700W的电源、intel带K的CPU配B系列主板、core10代配9代接口主板等笑话，我们姑且将其称为A君。一日，A君与社团中发布如下一张配置，系他本人所配，如图<br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025P1.png"><br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025P2.png"><br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025P3.png"><br>此时我恰好上线，遂打开其配置之第一页开始观看。发现A君配一台五万元的主机，选用的却是极低容量的QLC固态，速度慢质量差，却标注“新品”吸引消费者。相比A君定是被“新品”二字迷惑的新手，遂发出疑问。<br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025P4.png"><br>A君见状显然乱了手脚，忙不迭地发出一张电源的图片来搪塞，我见A君或许甚至不知何为QLC，便令其讲解，以辨真伪。不出所料，A君先是转出两张网上流传之科普图像，然后仿效滥竽充数之主角以懒得打字搪塞，而后以驴唇不对马嘴，颠倒黑白之总结收场。<br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025P5.png"><br>随后在我一系列追问及科普中，此君似乎意识到QLC之可怕，于是将其QLC固态改为TLC。<br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025P6.png"><br>此时，我以为A君之配置已经再无明显的问题，遂回去晚自习。可自习未至一半，另一位朋友告诉我，A君之配置甚至没有显卡，我仔细一看，发现我一直专注于A君“已选择”的错误却没有发现A君“未选择”的错误。遂向其发问，问其显卡去向。A君继续艰难搪塞，却被我拆穿，最终艰难收场。<br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025P7.png"><br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025P8.png"><br>我想，事已至此，A君当已小心谨慎，不敢再次放肆傲慢，却不料此人依旧酷爱“打肿脸充胖子”，以次充好，滥竽充数，以赢得威严。</p>
+<h2 id="国决事件"><a href="#国决事件" class="headerlink" title="国决事件"></a>国决事件</h2><p>然后就有了如今的国决事件。昨日，物竞之国决题目出炉，我与两位同好花费一个晚自习才艰难完成半道题，可见其难度。恰当日中午我在帮一位老师维修硬盘时遇到问题，便向社团之同好请教，A君再度出山，多次尝试滥竽充数进行指导，以博得威严。而后，当晚此人又给我的另一位好友B君发布“考试教学”以显威严。<br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025P9.png"><br>此时我便心生一计，令B君将国决试题改名改标，摇身一变变化为《直升初一年级物理读书会海选考试》这一看似十分简单之测试，发给A君试探其态度。<br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025PA.png"><br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025PB.png"><br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025PC.png"><br>随后，经过一夜之等待，A君迟迟没有回复B君，我想A君此时正不想面对他做不出一道题的事实。翌日，A君于多个场合再次高调炫耀其“看降旗”一事，我便再次向其发问。得到如下回复。<br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025PD.png"><br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025PE.png"><br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025PF.png"><br>然后A君用“制作视频”、“看降旗”等多种理由搪塞无果后，竟然语出狂言，称其能在国决考试中轻松拿下一百分，且认为“只是有点难”。我见状，大喜过望，忙拆穿此君之伪装和骗术。<br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025PG.png"><br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025PH.png"><br><img src="https://cdn.jsdelivr.net/gh/Zhang-Jia-Qi/CDN/img/P-20201025PI.png"><br>最终A君先是用“等待”搪塞，被我绕过后又辩称自己“没有装X”，最终被我揭穿后以“问我一个哲学问题”（未截图）来转移话题，我便没有得理不饶人。</p>
+<h2 id="想说的话"><a href="#想说的话" class="headerlink" title="想说的话"></a>想说的话</h2><p>A君只是一类人之一微小投影，即无实力却充大佬之徒。我们每个人的性格当中或多或少皆有如此之成分。一个学校尚且如此，出了校门我们所蒙蔽之假面还要更多。近日我于网上看到一句警句：“当你和一群人聊天，却看不出来其中谁最菜时，你便是最菜的。”此话没错，我想真正有实力之人，其实力是结实牢固的，正如以卵击石卵必碎，揭穿一个人的假面才能看出一个人真实的实力，自己不戴假面才能获得自己的真提升。<br>最终，希望A君能够尽快改邪归正。</p>
+
+    </div>
+
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2020 - 2021 ZJQの秘密基地
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Zhang-Jia-Qi
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'ZJQ-concise',      // The repository of store comments,
+        owner: 'Zhang-Jia-Qi',
+        admin: ['Zhang-Jia-Qi'],
+        language: 'en',
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: true  // Facebook-like distraction free mode
+    })
+    gitalk.render('gitalk-container')
+</script>
+
+</body>
+
+</html>
